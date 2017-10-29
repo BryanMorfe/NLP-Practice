@@ -28,4 +28,7 @@ MachineState &MachineState::getStateAt(int i) const
     return nextStates[i];
 }
 
-
+int MachineState::size()
+{
+    return count + 1;
+}

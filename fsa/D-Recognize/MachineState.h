@@ -10,6 +10,7 @@ public:
     void addAcceptedInput(std::string s, MachineState &state);
     std::string getAcceptedInputAt(int i) const;
     MachineState &getStateAt(int i) const;
+    int size();
 private:
     const int CAPACITY = 3;
     std::string acceptedInput[CAPACITY];
