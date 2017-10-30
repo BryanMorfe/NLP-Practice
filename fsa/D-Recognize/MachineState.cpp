@@ -28,6 +28,14 @@ MachineState &MachineState::getStateAt(int i) const
     return nextStates[i];
 }
 
+MachineState &MachineState::transitionStateForInput(std::string str) const
+{
+    int i;
+    while (str != acceptedInput[i])
+        i++;
+    return nextStates[i];
+}
+
 int MachineState::size()
 {
     return count + 1;
